@@ -1,0 +1,237 @@
+/* ------------------------------
+   The Matcha Lab
+   CIS 300 Website Project
+--------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f5f0e6;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+#wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #fffdf8;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 25px 20px 15px;
+    background-color: #fffdf8;
+}
+
+.logo {
+    width: 190px;
+    max-width: 70%;
+    height: auto;
+}
+
+/* NAVIGATION */
+
+nav {
+    border-top: 1px solid #d8d0c3;
+    border-bottom: 1px solid #d8d0c3;
+    background-color: #fffdf8;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+
+nav a {
+    color: #3f4d38;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+nav a:hover {
+    color: #a5673f;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 30px;
+    background-color: #e9dfcf;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.eyebrow {
+    color: #6c765d;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+h1 {
+    margin: 10px 0 20px;
+    color: #35402f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 3.2rem;
+    font-weight: normal;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #59654f;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.button:hover {
+    background-color: #3f4938;
+}
+
+/* WELCOME */
+
+.welcome {
+    max-width: 850px;
+    margin: auto;
+    padding: 70px 30px;
+    text-align: center;
+}
+
+h2 {
+    color: #48533f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.welcome p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* DISCOVER */
+
+.discover {
+    padding: 60px 40px 70px;
+    background-color: #f1eadf;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.cards article {
+    flex: 1;
+    padding: 30px;
+    background-color: #fffdf8;
+    border: 1px solid #ded5c8;
+}
+
+.cards h3 {
+    color: #59654f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+    background-color: #35402f;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+/* TABLET */
+
+@media (max-width: 800px) {
+
+    #wrapper {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+}
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+    #wrapper {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 50px 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .welcome,
+    .discover {
+        padding: 45px 20px;
+    }
+}
