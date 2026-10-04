@@ -1,3 +1,952 @@
+/* ------------------------------
+   THE MATCHA LAB
+   CIS 300 FINAL PROJECT
+--------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: aqua;
+    margin: 0;
+    background-color: #f5f0e6;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+#wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #fffdf8;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ------------------------------
+   HEADER
+--------------------------------- */
+
+header {
+    text-align: center;
+    padding: 25px 20px 15px;
+    background-color: #fffdf8;
+}
+
+.logo {
+    width: 190px;
+    max-width: 70%;
+    height: auto;
+}
+
+
+/* ------------------------------
+   NAVIGATION
+--------------------------------- */
+
+nav {
+    border-top: 1px solid #d8d0c3;
+    border-bottom: 1px solid #d8d0c3;
+    background-color: #fffdf8;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+
+nav a {
+    color: #3f4d38;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #a5673f;
+}
+
+
+/* ------------------------------
+   GENERAL
+--------------------------------- */
+
+.eyebrow {
+    color: #6c765d;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+h1 {
+    margin: 10px 0 20px;
+    color: #35402f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 3.2rem;
+    font-weight: normal;
+}
+
+h2 {
+    color: #48533f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+h3 {
+    color: #59654f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #59654f;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #3f4938;
+}
+
+.text-link {
+    color: #59654f;
+    font-weight: bold;
+}
+
+.external-link {
+    color: #59654f;
+    font-weight: bold;
+}
+
+
+/* ------------------------------
+   HOME HERO
+--------------------------------- */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding: 70px 30px;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 27, 17, 0.48),
+            rgba(20, 27, 17, 0.48)
+        ),
+        url("momentmatchaphoto.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    color: #ffffff;
+}
+
+.hero h1 {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero .hero-eyebrow {
+    color: #ffffff;
+}
+
+.hero-button {
+    background-color: rgba(89, 101, 79, 0.95);
+}
+
+.hero-button:hover {
+    background-color: #3f4938;
+}
+
+
+/* ------------------------------
+   HOME WELCOME
+--------------------------------- */
+
+.welcome {
+    max-width: 850px;
+    margin: auto;
+    padding: 70px 30px;
+    text-align: center;
+}
+
+.welcome p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ------------------------------
+   OUR STORY - TATAMI BACKGROUND
+--------------------------------- */
+
+.our-story {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 70px 40px;
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(25, 32, 20, 0.64),
+            rgba(25, 32, 20, 0.64)
+        ),
+        url("tatamiphoto.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.story-overlay {
+    max-width: 800px;
+    padding: 45px;
+    background-color: rgba(27, 34, 23, 0.64);
+    color: #ffffff;
+}
+
+.our-story h2 {
+    color: #ffffff;
+}
+
+.our-story p {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.story-eyebrow {
+    color: #f1eadf;
+}
+
+.story-message {
+    margin-top: 30px;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.story-button {
+    background-color: #f1eadf;
+    color: #35402f;
+}
+
+.story-button:hover {
+    background-color: #ffffff;
+}
+
+
+/* ------------------------------
+   HOME DISCOVER
+--------------------------------- */
+
+.discover {
+    padding: 60px 40px 70px;
+    background-color: #f1eadf;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.cards article {
+    flex: 1;
+    padding: 30px;
+    background-color: #fffdf8;
+    border: 1px solid #ded5c8;
+}
+
+
+/* ------------------------------
+   PAGE HEADING
+--------------------------------- */
+
+.page-heading {
+    padding: 65px 30px;
+    background-color: #e9dfcf;
+    text-align: center;
+}
+
+.page-heading p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ------------------------------
+   MENU PAGE
+--------------------------------- */
+
+.menu-section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.section-intro {
+    max-width: 700px;
+    margin: 0 auto 35px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.menu-item {
+    overflow: hidden;
+    background-color: #f1eadf;
+    border: 1px solid #ded5c8;
+    text-align: left;
+}
+
+.menu-image-area {
+    width: 100%;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f1eadf;
+}
+
+.menu-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 20px;
+}
+
+.menu-image-large {
+    padding: 30px;
+}
+
+.menu-content {
+    padding: 25px 30px 30px;
+}
+
+.menu-item h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.drink-size {
+    color: #6c765d;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+.menu-note {
+    padding: 55px 30px;
+    background-color: #e7eadf;
+    text-align: center;
+}
+
+.menu-note p {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ------------------------------
+   ABOUT MATCHA
+--------------------------------- */
+
+.about-section {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 40px;
+}
+
+.about-block {
+    padding: 25px 0;
+    border-bottom: 1px solid #ded5c8;
+}
+
+.about-block:last-child {
+    border-bottom: none;
+}
+
+.matcha-steps {
+    padding-left: 25px;
+}
+
+.matcha-steps li {
+    margin-bottom: 10px;
+}
+
+
+/* ------------------------------
+   ABOUT - MATCHA FIELD
+--------------------------------- */
+
+.origin-section {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: stretch;
+    background-color: #e7eadf;
+}
+
+.origin-image {
+    min-height: 430px;
+}
+
+.origin-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.origin-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 50px;
+}
+
+.origin-content p {
+    max-width: 550px;
+}
+
+
+/* ------------------------------
+   ABOUT - PREPARATION
+--------------------------------- */
+
+.preparation-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    background-color: #fffdf8;
+}
+
+.preparation-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 50px;
+}
+
+.preparation-image {
+    min-height: 520px;
+}
+
+.preparation-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ------------------------------
+   VIDEO
+--------------------------------- */
+
+.video-section {
+    padding: 65px 40px;
+    background-color: #e7eadf;
+    text-align: center;
+}
+
+.video-section p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-section video {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 30px auto 0;
+    border-radius: 4px;
+}
+
+
+/* ------------------------------
+   ABOUT STORY - TEA HOUSE
+--------------------------------- */
+
+.story.about-story {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 70px 40px;
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 27, 17, 0.65),
+            rgba(20, 27, 17, 0.65)
+        ),
+        url("teahousephoto.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-story-overlay {
+    max-width: 760px;
+    padding: 45px;
+    background-color: rgba(27, 34, 23, 0.68);
+    color: #ffffff;
+}
+
+.about-story h2 {
+    color: #ffffff;
+}
+
+.about-story p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.light-link {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+/* ------------------------------
+   POP-UPS
+--------------------------------- */
+
+.popups-section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.table-container {
+    max-width: 1000px;
+    margin: 35px auto 0;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fffdf8;
+}
+
+th,
+td {
+    padding: 20px;
+    border: 1px solid #ded5c8;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #59654f;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1eadf;
+}
+
+.community-section {
+    padding: 60px 40px;
+    background-color: #e7eadf;
+    text-align: center;
+}
+
+.community-section p {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ------------------------------
+   CONTACT
+--------------------------------- */
+
+.contact-section {
+    max-width: 850px;
+    margin: auto;
+    padding: 60px 40px;
+}
+
+.contact-intro {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-intro p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-email {
+    color: #59654f;
+    font-weight: bold;
+}
+
+form {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    background-color: #f1eadf;
+    border: 1px solid #ded5c8;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 6px;
+    color: #48533f;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bfb5a6;
+    background-color: #ffffff;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    width: auto;
+    align-self: flex-start;
+    padding: 12px 25px;
+    border: none;
+    background-color: #59654f;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #3f4938;
+}
+
+.collaboration-section {
+    padding: 60px 40px;
+    background-color: #e7eadf;
+    text-align: center;
+}
+
+.collaboration-section p {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ------------------------------
+   SOCIAL MEDIA
+--------------------------------- */
+
+.social-section {
+    padding: 65px 40px;
+    background-color: #f1eadf;
+    text-align: center;
+}
+
+.social-section p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 25px;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    color: #48533f;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-link img {
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.social-link:hover {
+    color: #a5673f;
+}
+
+
+/* ------------------------------
+   FOOTER
+--------------------------------- */
+
+footer {
+    padding: 25px;
+    background-color: #35402f;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+
+/* ------------------------------
+   TABLET
+--------------------------------- */
+
+@media (max-width: 800px) {
+
+    #wrapper {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-image-area {
+        height: 350px;
+    }
+
+    .menu-image {
+        padding: 20px;
+    }
+
+    .menu-image-large {
+        padding: 30px;
+    }
+
+    .origin-section,
+    .preparation-section {
+        grid-template-columns: 1fr;
+    }
+
+    .origin-image {
+        min-height: 350px;
+    }
+
+    .preparation-image {
+        min-height: 450px;
+    }
+
+    .origin-content,
+    .preparation-content {
+        padding: 50px 35px;
+    }
+}
+
+
+/* ------------------------------
+   PHONE
+--------------------------------- */
+
+@media (max-width: 600px) {
+
+    #wrapper {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 50px 20px;
+        background-position: center;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .welcome,
+    .discover,
+    .page-heading,
+    .menu-section,
+    .menu-note,
+    .about-section,
+    .video-section,
+    .popups-section,
+    .community-section,
+    .contact-section,
+    .collaboration-section,
+    .social-section {
+        padding: 45px 20px;
+    }
+
+    .our-story,
+    .story.about-story {
+        min-height: 500px;
+        padding: 35px 20px;
+    }
+
+    .story-overlay,
+    .about-story-overlay {
+        padding: 30px 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-image-area {
+        height: 320px;
+    }
+
+    .menu-image {
+        padding: 15px;
+    }
+
+    .menu-image-large {
+        padding: 25px;
+    }
+
+    .origin-image {
+        min-height: 260px;
+    }
+
+    .preparation-image {
+        min-height: 350px;
+    }
+
+    .origin-content,
+    .preparation-content {
+        padding: 45px 25px;
+    }
+
+    th,
+    td {
+        padding: 12px;
+    }
+
+    form {
+        padding: 25px 20px;
+    }
+
+    .video-section video {
+        width: 100%;
+        height: auto;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .social-link {
+        justify-content: center;
+    }
+
+    .social-link img {
+        width: 24px;
+        height: 24px;
+        max-width: 24px;
+        max-height: 24px;
+    }
 }
